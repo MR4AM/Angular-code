@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+//组件作用节点、view层注入
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
