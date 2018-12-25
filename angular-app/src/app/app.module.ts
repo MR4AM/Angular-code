@@ -27,7 +27,8 @@ import {HttpclientService} from './utils/httpclient.service';
 import {ModalService} from './service/modal.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { HostserverComponent } from './components/hostserver/hostserver.component'
+import { HostserverComponent } from './components/hostserver/hostserver.component';
+import { TestComponent } from './components/test/test.component'
 
 
 //组件及模块注入区域
@@ -48,7 +49,8 @@ import { HostserverComponent } from './components/hostserver/hostserver.componen
     LazyDirective,
     StatusPipe,
     ModalComponent,
-    HostserverComponent 
+    HostserverComponent,
+    TestComponent 
   ],
   imports: [
     BrowserModule,

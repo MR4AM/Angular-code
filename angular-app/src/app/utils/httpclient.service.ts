@@ -3,10 +3,12 @@ import {Http, Headers,RequestMethod,RequestOptions,URLSearchParams} from '@angul
 import {RootRouter} from '../router/router'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
+//封装http服务成私有类输出
 @Injectable()
 export class HttpclientService {
     baseUrl:string = 'http://10.3.136.18:9090/'
 
+    //在构造器中使用私有模块
     constructor(private http : Http, private router: Router) { }
 
     filterUrl(url){

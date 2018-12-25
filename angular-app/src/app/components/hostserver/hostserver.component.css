@@ -10,6 +10,9 @@
     height:100%;
     background-color: #fff;
 }
+.servercontent ul,li{
+    list-style: none;
+}
 .servercontent ul li{
     margin:0.099338rem;
     padding:0.331126rem;
@@ -19,7 +22,7 @@
 }
 .servercontent ul p{
     font-size: 0.331126rem;
-    max-height: 0.662252rem;
+    /* max-height: 0.662252rem; */
     overflow:hidden;
 }
 .libox,.pbox{
