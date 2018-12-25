@@ -1,0 +1,57 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-11 16:54:16
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-12 10:45:09
+*/
+.popup .shade{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background:#000;
+    opacity: .3;
+    z-index: 100;
+}
+.popup .popup_m{
+    background-color: #fff;
+    height:2.666667rem;
+    width:5.333333rem;
+    border:0.013333rem solid #ccc;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    display:flex;
+    flex-direction: column;
+    
+}
+.popup_m .isensure{
+    font-size:32px;
+    text-align: center;
+    line-height: 1.333333rem;
+    flex:1;
+    border-bottom:0.026667rem solid #ccc;
+}
+.popup .popup_m .btns{
+    display:flex;
+}
+.popup .popup_m .btns span:first-child{
+    border-right: 0.013333rem solid #ccc;
+    color:#0bb20c;
+}
+.popup .popup_m .btns span{
+    display:block;
+    text-align: center;
+    height:1rem;
+    line-height: 1rem;
+    flex:1;
+    font-size:28px;
+}
+
+@media screen and (min-width:992px){
+    .popup_m .isensure{font-size: 60px;}
+    .popup .popup_m .btns span{font-size: 56px;}
+}

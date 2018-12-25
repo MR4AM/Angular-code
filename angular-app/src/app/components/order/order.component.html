@@ -1,0 +1,27 @@
+<div id="orderList">
+    <ul>
+        <li *ngFor="let item of dataset" (click)="goTodetail(item.id)">
+            <div class="order_t">
+                <h3>订单编号：{{item.id}}</h3>   
+                <span class="status">{{item.status | status}}</span>
+            </div>     
+            <div class="orderInfo">
+                <img src="{{item.imgurl}}" alt="" />
+                <div class="info">
+                    <p>{{item.proName}}</p>
+                    <p>入住日期：{{item.starttime}}</p>
+                    <p>退房日期：{{item.endtime}}</p>
+                    <p>入住人数：{{item.tenants}}</p>    
+                </div>
+            </div>   
+            <div class="order_b">
+                <span>总价：￥{{item.totalprice}}</span>
+                <button *ngIf="item.status == 0" (click)="showpopup(item.id)">取消订单</button>
+                <button (click)="goTodetail(item.id)" *ngIf="item.status!=0">查看订单</button>
+                <button (click)="goToPay(item.id)" *ngIf="item.status == 0">去支付</button>
+            </div>
+        </li>   
+    </ul>
+    <popup *ngIf="show"  (isCancel)="isCancel($event)"></popup>
+    <div class="tip" *ngIf="dataset.length == 0">您暂时还没有订单哦</div>
+</div>

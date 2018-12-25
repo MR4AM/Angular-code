@@ -1,0 +1,81 @@
+
+<div id="home">
+	<!-- 轮播图 -->
+	<div id="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide" *ngFor="let i of imgArr">
+	        	<img src="../../../assets/icon/home.gif" fk  [attr.data-img]="i" class="swiper-lazy" alt="">
+	        </div>
+	        <div class="swiper-pagination"></div>
+	    </div>
+	</div>
+	<!-- 搜索 -->
+	<div class="home_search">
+		<input type="text" name="" placeholder="你想去哪里？" [(ngModel)]="text" >
+		<!-- <a (click)="searchhome"><i class="fa fa-search"></i></a> -->
+		<a (click)="searchhome(text)"><i>搜索</i></a>
+
+	</div>
+	
+	<div class="main"  oc-lazy-load="['js/testModule.js', 'partials/lazyLoadTemplate.html']">
+		<!-- 热点区域 -->
+		<div class="hotarea">
+			<div class="wenzi"><h3>热点区域</h3></div>
+
+			<a (click)="jump(item)" class="mainarea" *ngFor="let item of hotarea">
+				<img src="../../../assets/icon/home.gif" fk  [attr.data-img]="item.imgurl" alt="">
+				<!-- <img src="http://cdn.uedna.com/201402/1392662524764.gif" alt=""> -->
+				<div class="hotfoot">
+					<span>{{item.city}}</span>
+				</div>
+			</a>
+		</div>
+		<!-- 发现精彩 -->
+		<div class="findgood">
+			<ul class="wenzi">
+				<li><h3>发现精彩</h3></li>
+				<li><a href="">更多专题></a></li>
+			</ul>
+			<a href="" class="mainarea" *ngFor="let item of findgood">
+				<img src="../../../assets/icon/home.gif" fk  [attr.data-img]="item.imgurl" alt="">
+				<div class="zhezhao">
+					<span>{{item.city}}</span>
+				</div>
+			</a>
+		</div>
+		<!-- 推荐住宿 -->
+		<div class="recommend_live">
+			<div class="wenzi"><h3>推荐住宿</h3></div>
+				<ul>
+					<li *ngFor="let key of list; let idx = index;"  (click)="choose(idx)" [class.active]="index == idx">{{key}}</li>
+				</ul>
+
+	 	<div class="content">
+		        <div class="content_item" *ngFor="let item of citygoods">
+		            <div class="content_item_tolink" (click)="homejumptodet(item.id)">
+		                <div class="content_item_tolink_img">
+		                	<img src="../../../assets/icon/home.gif" fk  [attr.data-img]="item.proImg.split(';')[0]" alt="">
+		                    
+		                    <i class="fa fa-heart"></i>
+
+		                </div>
+		                <div class="content_item_tolink_price">
+		                    <div class="content_item_tolink_price_tag">
+		                        <span>￥</span>
+		                        {{item.proPrice}}
+		                        <em>起/晚</em>
+		                    </div>
+		                </div>
+		                <div class="content_item_tolink_des">
+		                    <h3>{{item.proName}}</h3>
+		                    <div class="content_item_tolink_des_tips">
+		                        <span>{{item.des}}</span>   
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<spinner *ngIf="spinner_show"></spinner>

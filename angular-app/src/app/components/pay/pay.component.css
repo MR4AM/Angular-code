@@ -1,0 +1,83 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-09 09:46:15
+* @Last Modified by:   Marte
+<<<<<<< HEAD
+* @Last Modified time: 2018-04-13 14:20:09
+*/
+
+#order_pay{
+    display:flex;
+    height:100%;
+    flex-direction: column;
+    background:#fff;
+}
+#order_pay .main{
+    flex:1;
+}
+#order_pay .main .main_t{
+    display:flex;
+    flex-wrap: nowrap;
+}
+#order_pay button{
+    display:block;
+    height:1.333333rem;
+    background-color: #3a3a48;
+    width:100%;
+    line-height: 1.333333rem;
+    font-size: 32px;
+    color:#fff;
+}
+#order_pay .main_t{
+    padding:0.32rem 0.426667rem;
+    background:#fff;
+    overflow:hidden;
+    border-bottom: 0.026667rem solid #ccc;
+}
+#order_pay .main_t img{
+    width:3.413333rem;
+    height:2.293333rem;
+    float: left;
+}
+#order_pay .main_t .info{
+    padding-top: 0.133333rem;
+    float: left;
+    margin-left: 0.186667rem;
+    line-height: 0.533333rem;
+}
+#order_pay .main_t .info p{
+    white-space: nowrap;
+}
+#order_pay .main_t .info p:first-child,#order_pay .main_t .info p:last-child{
+    font-size:32px;
+    
+}
+#order_pay .main_t .info p:nth-child(2){
+    color:#9b9b9b;
+    font-size:24px;
+}
+
+#order_pay .zhifubao,#order_pay .yinlian{
+    padding:0 0.426667rem;
+    color:#6b6b76;
+    font-size:32px;
+    border-bottom: 0.026667rem solid #ccc;
+    height:1.333333rem;
+    line-height: 1.333333rem;
+}
+#order_pay div i{
+    float: right;
+    color: #ccc;
+}
+
+
+@media screen and (min-width:992px){
+   #order_pay .main_t .info p:first-child,
+   #order_pay .main_t .info p:last-child,
+   #order_pay .zhifubao,#order_pay .yinlian,
+   #order_pay .popup .popup_m .isensure,
+   #order_pay footer button{font-size: 50px;}
+   #order_pay .popup .popup_m .btns span{font-size: 48px;}
+   #order_pay .main_t .info p:nth-child(3){font-size: 40px;}
+   #order_pay .main_t .info p:nth-child(2){font-size: 38px;}
+} 

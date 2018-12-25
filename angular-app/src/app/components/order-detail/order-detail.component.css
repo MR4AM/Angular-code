@@ -1,0 +1,74 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-09 14:30:25
+* @Last Modified by:   Marte
+<<<<<<< HEAD
+* @Last Modified time: 2018-04-12 22:02:52
+*/
+#order_detail{
+    padding:0.4rem;
+    display:flex;flex-direction: column;height:100%;
+    background: #fff;
+}
+#order_detail .main{
+    flex:1;
+}
+#order_detail img{
+    height:3.866667rem;
+    width:100%;
+}
+#order_detail .time{
+    display:flex;
+    background:#f6f6f7;
+}
+#order_detail .time .in_time{
+    border-right: 0.026667rem solid #ccc;
+}
+#order_detail .time div{
+    padding:0.233333rem 0;
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+}
+#order_detail ul{
+    padding: 0 0.32rem;
+}
+#order_detail ul li{
+    height:1.066667rem;
+    line-height: 1.066667rem;
+    border-bottom: 0.026667rem solid #ccc;
+    font-size: 28px;
+}
+#order_detail ul li span:last-child{
+    margin-left: 0.533333rem;
+    font-size: 24px;
+}
+#order_detail .contact_info{
+    padding:0.226667rem 0.32rem;
+}
+#order_detail .contact_info h4{
+    font-weight: normal;
+    line-height: 1.066667rem;
+}
+#order_detail .contact_info p{
+    line-height: 0.533333rem;
+}
+#order_detail .contact_info p span{
+    margin-left: 0.533333rem;
+}
+#order_detail .topay button{
+    display:block;
+    height:1.333333rem;
+    background-color: #3a3a48;
+    width:100%;
+    line-height: 1.333333rem;
+    font-size: 32px;
+    color:#fff;
+}
+
+@media screen and (min-width:992px){
+   #order_detail .time div,#order_detail ul li{font-size: 56px;}
+   #order_detail ul li span:last-child,#order_detail .contact_info,#order_detail .topay button{font-size: 48px;}
+}

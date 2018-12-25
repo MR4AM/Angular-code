@@ -1,0 +1,80 @@
+<div class="list" (scroll)="loadmore($event)">
+    <div class="content">
+        <div class="content_item" *ngFor="let obj of showArr;let idx = index">
+            <a (click)="linkTo(obj.id)" class="content_item_tolink" id={{obj.id}}>
+                <div class="content_item_tolink_img">
+                    <img src="../../../assets/icon/home.gif"  fk  [attr.data-img]="imgArr[idx]" >
+                </div>
+                <div class="content_item_tolink_price">
+                    <div class="content_item_tolink_price_tag">
+                        <span>￥</span>
+                        {{obj.proPrice}}
+                        <em>起/晚</em>
+                    </div>
+                </div>
+                <div class="content_item_tolink_des">
+                    <h3>{{obj.proName}}</h3>
+                    <div class="content_item_tolink_des_tips">
+                        <span>{{spanArr[idx]}}</span>
+                        <img src="../../../assets/icon/xy.png">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="content_loadmore">
+            <div class="nolist" *ngIf="nolist_show">
+                <p>抱歉，暂无该地区的房源！<a href="/">返回首页</a>再逛逛！</p>
+            </div>
+            <div *ngIf="!nolist_show">
+                <p *ngIf="loadmore_show" class="loadmorep">———————没有更多了———————</p>
+                <button  class="content_loadmore_loadmorebtn" (click)="loadmore()">
+                    加载更多房源
+                    <!-- <i class="fa fa-chevron-down content_loadmoreArrow "></i> -->
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="listfoot">
+        <div class="listfoot_item">
+            <div class="listfoot_item_inside">
+                <div class="listfoot_item_inside_title">筛选</div>
+            </div>
+        </div>
+        <div class="listfoot_item">
+            <div class="listfoot_item_inside">
+                <div class="listfoot_item_inside_title">位置</div>
+            </div>
+        </div>
+        <div class="listfoot_item" (click)="maskshow($event)">
+            <div class="listfoot_item_inside">
+                <div class="listfoot_item_inside_title">排序</div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="modal_mask_show">
+        <div class="yf-modal-mask" (click)="maskshow($event)"></div>
+        <div class="yf-modal-range">
+            <div class="yf-modal">
+                <div class="yf-modal-body">
+                    <div class="yf-modal-sortcontainer">
+                        <div class="yf-modal-sortheader">排序</div>
+                        <span class="yf-modal-sortcancel" (click)="maskshow($event)">取消</span>
+                        <div class="yf-modal-sortitem">价格排序 
+                            <i></i>
+                        </div>
+                        <div class="yf-modal-sortitem">人气排序
+                            <i></i>
+                        </div>
+                        <div class="yf-modal-sortitem">热门排序
+                            <i></i>
+                        </div>
+                        <div class="yf-modal-sortitem">附近排序
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<spinner *ngIf="spinner_show"></spinner>

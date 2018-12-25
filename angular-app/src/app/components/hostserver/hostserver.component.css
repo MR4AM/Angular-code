@@ -1,0 +1,65 @@
+.hostserver{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+.servercontent{
+    flex:1;
+    overflow-x:hidden;
+    overflow-y: auto;
+    height:100%;
+    background-color: #fff;
+}
+.servercontent ul li{
+    margin:0.099338rem;
+    padding:0.331126rem;
+    font-size: 0.397351rem;
+    border-radius: 5%;
+    color:#fff;
+}
+.servercontent ul p{
+    font-size: 0.331126rem;
+    max-height: 0.662252rem;
+    overflow:hidden;
+}
+.libox,.pbox{
+    overflow:hidden;
+}
+.servercontent ul div:nth-child(odd) li{
+    background-color:orange;
+    float:left;
+}
+.servercontent ul div:nth-child(even) li{
+    background-color:skyblue;
+    float:right;
+} 
+.servercontent ul div:nth-child(odd) p{
+    float:left;
+}
+.servercontent ul div:nth-child(even) p{
+    float:right;
+}
+.serverfooter{
+    width: 100%;
+    background: #eee;
+    border-top:0.033113rem solid #ccc;
+}
+.serverfooter input{
+    padding:0;
+    margin:0;
+    width:80%;
+    height: 0.993377rem;
+    line-height: 0.993377rem;
+    font-size: 0.463576rem;    
+}
+.serverfooter .in{
+    padding:0;
+    margin: 0;
+    width: 18%;
+    height: 0.993377rem;
+    line-height: 0.993377rem;
+    font-size: 0.463576rem;
+    background-color: #000;
+    color:#fff;
+}
+

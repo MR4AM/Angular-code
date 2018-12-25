@@ -1,0 +1,65 @@
+<div id="orderWrite">
+    <div class="od_main">
+        <div class="main_t">
+            <img src={{imgurl}} alt="" />
+            <div class="info">
+                <p>{{dataset.proName}}</p>
+                <p>City:{{dataset.city}}</p>
+                <p>{{dataset.proSpec}}</p>
+                <p>￥{{dataset.proPrice}}</p>    
+            </div>
+        </div>
+        <div class="mydate">
+            入住时间
+            <i></i>
+            退房时间
+        </div>  
+        
+        <div class="guestNumber">
+            <p>入住人数</p>
+            <button (click)="changeCount(jian.innerText)" #jian>-</button>
+            <input type="text" [(ngModel)]="count" readonly />
+            <button (click)="changeCount(jia.innerText)" #jia>+</button>
+        </div>
+        <div class="contactInfo">
+            <p>联系人信息</p>
+            <div>
+                <label for="name"><i>*</i>姓名</label>
+                <input type="text" id="name"  [(ngModel)]="username"/>
+                <span [class.active]="username">√</span>
+                <span [class.active]="!username">×</span>
+            </div>
+            <div>
+                <label for="name"><i>*</i>手机</label>
+                <input type="text" id="name" [(ngModel)]="tel" (input)="telIsRight()"/>    
+                <span [class.active]="flag1">√</span>
+                <span [class.active]="!flag1">×</span>
+            </div>
+            <div>
+                <label for="name"><i>*</i>邮箱</label>
+                <input type="text" id="name" [(ngModel)]="email" (input)="emailIsRight()"/>
+                <span [class.active]="flag2">√</span> 
+                <span [class.active]="!flag2">×</span>
+            </div>
+        </div>
+        <div class="totalPrice" *ngIf="showTotal">
+            <p>价格</p>
+            <div>
+                <span>总价</span>
+                <span>￥{{price*days+cleanPrice}}</span>
+            </div>
+            <div>
+                <span>￥{{price}}(平均)x{{days}}晚</span>
+                <span>￥{{price*days}}</span>
+            </div>
+            <div>
+                <span>清洁费</span>
+                <span>￥{{cleanPrice}}</span>
+            </div>    
+        </div>
+    </div>
+    <div class="od_footer">
+        <button (click)="goToOrder()">提交订单</button>
+    </div>    
+</div>
+<spinner *ngIf="spinner_show"></spinner>

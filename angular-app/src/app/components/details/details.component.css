@@ -1,0 +1,221 @@
+
+.detail{ 
+    display:flex;flex-direction: column;height:100%;flex-direction: column;width: 100%;background:#fff;
+    }
+.detailcontent{flex:1;overflow-x:hidden;overflow-y:auto;}
+.detailswiper{position:relative;}
+.housePrice{
+    position:absolute;
+    bottom:10%;
+    width:3.311258rem;
+    height:0.993377rem; 
+    line-height:0.993377rem;
+    background-color: #000;
+    opacity:.6;
+    z-index: 100;
+    font-size: 0.397351rem;
+    color:#fff;
+}
+.housePrice span{color:#fff;text-align: center;font-size: 0.529801rem;z-index: 101;}
+.swiper-container{
+   width: 100%;
+   height:6.622517rem;
+}
+.swiper-container img{
+   width: 100%;
+   height: 6.622517rem;
+}
+.housename h2{
+    font-size:0.596026rem;
+    color: inherit;
+    padding: .3rem 0 .08rem;
+    margin: 0;
+    text-align: center;
+}
+.housenum{
+    text-align: center;
+    font-size: 0.397351rem;
+}
+.housedes ul{
+    margin:0.331126rem 1.324503rem;
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+}
+.housedes ul li{
+    float: left;
+    overflow: hidden;
+    font-size: 100%;
+    text-align: center;
+}
+.housedes ul li span{
+    display: block;
+    text-align: center;
+    color: #6b6b76;
+    font-size:0.397351rem;
+}
+.basehousebox{
+    overflow: hidden;
+    margin: 0.993377rem .12rem 0 .12rem;
+}
+.baseh3{
+    border-left: .04rem solid #28a4b0;
+    color: #3a3a48;
+    font-size:0.463576rem;
+    font-weight: 400;
+    float: left;
+    padding-left:0.165563rem;
+    height:0.463576rem;
+    line-height:0.463576rem;
+}
+ .basespan{
+    display: inline-block;
+    padding:0.066225rem 0.331126rem;
+    border: .04rem solid #28a4b0;
+    color: #28a4b0;
+    border-radius: 0.496689rem;
+    font-size:0.331126rem;
+    float: right;
+}
+.basep{
+    font-size:0.364238rem;
+    padding: .12rem .12rem 0;
+    margin-bottom: .4rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    max-height:1.15894rem;
+}
+.houseposition{
+    width: 100%;
+    height: 5.960265rem;
+}
+.houseposition p{
+    margin-top: 10.927152rem;
+}
+.baidu-map{width: 100%;height:100%;overflow: hidden;margin:0.331126rem auto;font-family:"微软雅黑";
+   }
+.hp span{
+    display: inline-block;
+    color: #28a4b0;
+    font-size:0.331126rem;
+}
+.housesevice ul,.freeserve  ul{
+    margin:0.993377rem 1.324503rem 0 0;
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+}
+.housesevice ul li,.freeserve  ul li,.payserve  ul li{
+    float: left;
+    overflow: hidden;
+    font-size: 100%;
+    text-align: center;
+}
+.housesevice ul li span,.freeserve  ul li span,.payserve  ul li span{
+    display: block;
+    text-align: center;
+    color: #6b6b76;
+    font-size:0.397351rem;
+    padding-right: 0.331126rem;
+}
+.payserve  ul{
+    margin:0.993377rem 1.324503rem 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+.notedetail ul li{
+    padding:0.331126rem 0.165563rem;
+    overflow: hidden;
+    border-bottom: .04rem solid #e6e6e9;
+    font-size:0.397351rem;
+}
+.notedetail ul li span{
+    display: inline-block;
+    float: left;
+    color: #6b6b76;
+}
+.notedetail ul li em{
+    display: inline-block;
+    float: right;
+    font-style: normal;
+    color: #3a3a48;
+}
+ .notedetail .notecheck{
+    font-size: 0.397351rem;
+    display: inline-block;
+    float: right;
+    font-style: normal;
+    color: #28a4b0;
+}
+.detailpagebottom{
+    margin-top: 0.662252rem;
+}
+.detailpagebottom p{
+    font-size: 0.397351rem;
+    text-align: center;
+    font-weight: 100;
+}
+.reservernow{
+    width:100%;
+    height:1.324503rem;
+    line-height: 1.324503rem;
+    background-color: #eee;
+}
+.reservernow span{
+    display:block;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    float: right;
+    background: #000;
+    color: #fff;
+    font-size: 0.529801rem;
+}
+.jasonMask{
+    /*display:none;*/
+    z-index: 1000;
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+.jasonModal{
+    /*display:none;*/
+    z-index: 1001;
+    position: fixed;
+    overflow: auto;
+    top: 5%;
+    right: 5%;
+    width:90%;
+    height: 90%;
+    background-color: #fff;
+}
+.jasonclose{
+    width: 0.993377rem;
+    height: 0.993377rem;
+    text-align: center;
+    font-size: 0.662252rem;
+    line-height:  0.993377rem;
+    border-radius: 50%;
+    border: .06rem solid #ccc;
+    background: #fff;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-left: -.25rem;
+}
+.jasonh3{
+    text-align: center;
+    font-size: 0.529801rem;
+    padding:0.165563rem;
+}
+.jasonp{
+    font-size: 0.397351rem;
+    padding:0.165563rem;
+}

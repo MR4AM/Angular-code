@@ -1,0 +1,235 @@
+
+.list{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    background:#f2f2f4;
+}
+.listhead{background: #000;height: 1.066667rem;}
+.content{flex:1;overflow-x:hidden;}
+.content .content_item{
+    overflow: hidden;
+    position: relative;
+}
+.content .content_item_tolink{
+    display: block;
+    width: 100%;
+    height: 8.266667rem;
+    background: #fff;
+    position: relative;
+    margin-bottom: .213333rem;
+}
+.content .content_item_tolink_img,.content .content_item_tolink_img img{
+    height: 6.666667rem;
+    width: 100%;
+}
+.content_item_tolink_price{
+    position: absolute;
+    left: 0;
+    top: 5.44rem;
+    height: .853333rem;
+}
+.content_item_tolink_price .content_item_tolink_price_tag{
+    display: block;
+    float: left;
+    height: .853333rem;
+    line-height: .853333rem;
+    color: #fff;
+
+    font-size: 0.662252rem;
+
+    font-size: 40px;
+    font-weight: 400;
+    padding: 0 .133333rem;
+    background: rgba(0,0,0,.5);
+}
+.content_item_tolink_price_tag em{
+    color: #c0c0c8;
+    font-size: 24px;
+    font-style: normal;
+    margin-left: .053333rem;
+}
+.content_item_tolink_des{
+    height: 1.6rem;
+    padding-top: .32rem;
+    padding-left: .32rem;
+}
+.content_item_tolink_des h3{
+    width: 7.466667rem;
+    overflow: hidden;
+    color: #3a3a48;
+    font-size: 32px;
+    line-height: .426667rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    position: relative;
+}
+.content_item_tolink_des_tips{
+    margin-top: .16rem;
+    height: .32rem;
+    line-height: .32rem;
+}
+.content_item_tolink_des_tips span{
+
+    font-size: 0.463576rem;
+    font-size: 24px;
+    color: #6b6b76;
+    margin-right: .426667rem;
+}
+.content_item_tolink_des_tips img{
+    width: 1.72rem;
+    height: .546667rem;
+    position: absolute;
+    right: .32rem;
+    bottom: .773333rem;
+}
+.content .content_loadmore{
+    padding-bottom: 2.133333rem;
+}
+.content .content_loadmore_loadmorebtn{
+    width: 9.333333rem;
+    height: 1.2rem;
+    text-align: center;
+    margin: .666667rem auto 0;
+    display: block;
+    background: #3a3a48;
+    border-radius: .08rem;
+    color: #f8f8f9;
+
+    font-size: 0.529801rem;
+
+    font-size: 30px;
+
+    line-height: 1.2rem;
+}
+.listfoot{
+    width: 10rem;
+    height: 1.333333rem;
+    box-shadow: 0 -.026667rem 0 #d9d9de;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 2;
+}
+.listfoot .listfoot_item{
+    width: 3.306667rem;
+    height: 1.333333rem;
+    padding-top: .186667rem;
+    float: left;
+}
+.listfoot_item_inside{
+    width: 3.306667rem;
+    height: .933333rem;
+    color: #6b6b76;
+    font-size: 32px;
+    text-align: center;
+    border-right: 1px solid #d9d9de;
+}
+.listfoot_item_inside_title{
+    line-height: .933333rem;
+}
+.yf-modal-mask{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #373737;
+    background-color: rgba(55,55,55,.6);
+    height: 100%;
+    z-index: 1000;
+}
+.yf-modal-range{
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    width: 10rem;
+    margin: 0 auto;
+}
+.yf-modal-range .yf-modal{
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    width: 100%!important;
+    margin: 0;
+    padding-bottom: 0;
+}
+.yf-modal-range .yf-modal .yf-modal-body{
+
+    font-size: 0.397351rem;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+.yf-modal-range .yf-modal .yf-modal-body .yf-modal-sortcontainer{
+    position: relative;
+    border-radius: 0;
+    background: #f9f9fa;
+}
+.yf-modal-range .yf-modal .yf-modal-body .yf-modal-sortcontainer .yf-modal-sortheader{
+    height: 1.333333rem;
+    text-align: center;
+
+    font-size: 0.463576rem;
+
+    font-size: 36px;
+
+    color: #3a3a48;
+    line-height: 1.333333rem;
+    width: 100%;
+}
+.yf-modal-range .yf-modal .yf-modal-body .yf-modal-sortcontainer .yf-modal-sortcancel{
+    color: #28a4b0;
+
+    font-size:0.463576rem;
+
+    font-size: 24px;
+
+    float: right;
+    position: absolute;
+    top: .506667rem;
+    right: .32rem;
+}
+.yf-modal-range .yf-modal .yf-modal-body .yf-modal-sortcontainer .yf-modal-sortitem{
+    color: #28a4b0;
+    background: #fff;
+    width: 100%;
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    text-align: center;
+
+    font-size:0.463576rem;
+
+    font-size: 32px;
+
+    position: relative;
+}
+.yf-modal-range .yf-modal .yf-modal-body .yf-modal-sortcontainer .yf-modal-sortitem i{
+    position: absolute;
+    display: inline-block;
+    top: .426667rem;
+    right: .426667rem;
+    width: .4rem;
+    height: .346667rem;
+    background-size: contain;
+}
+
+.loadmorep{font-size: 0.463576rem;text-align: center;}
+.nolist p{
+    font-size:0.426667rem;
+    padding-top:2.0rem;
+    text-align: center;
+}
+

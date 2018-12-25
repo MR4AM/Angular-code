@@ -1,0 +1,62 @@
+.jason-spinner-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    opacity: .4;
+    z-index: 2090;
+}
+
+.jason-spinner-three-bounce.jason-spinner {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color: none!important;
+    z-index: 2099;
+    margin: 0 auto;
+    text-align: center;    
+}
+
+.jason-spinner-three-bounce div {
+    float:left;
+    width:0.165563rem;
+    height: 1.324503rem;
+    margin-right: 0.066225rem;
+    background-color: #000;
+   /* border-radius: 100%;*/
+    display: inline-block;
+    -webkit-animation: jason-threeBounceDelay 1.4s infinite ease-in-out;
+    animation: jason-threeBounceDelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.jason-spinner-three-bounce .jason-bounce1 {
+    -webkit-animation-delay: -.48s;
+    animation-delay: -.48s;
+}
+
+.jason-spinner-three-bounce .jason-bounce2 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s;
+}
+.jason-spinner-three-bounce .jason-bounce3 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s;
+}
+
+@-webkit-keyframes jason-threeBounceDelay{
+    0%,
+    100%,
+    80%{-webkit-transform:scale(0); transform:scale(0)}
+    40%{-webkit-transform:scale(1);transform:scale(1)}
+}
+@keyframes jason-threeBounceDelay{
+    0%,
+    100%,
+    80%{-webkit-transform:scale(0);transform:scale(0)}
+    40%{-webkit-transform:scale(1);transform:scale(1)}
+}

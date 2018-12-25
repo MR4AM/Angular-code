@@ -1,0 +1,16 @@
+<div class="hostserver">
+    <div class="servercontent">
+        <ul>
+            <div class="libox" *ngFor="let i of mesArr;let idx = index">
+                <div class="pbox">
+                    <p>{{i.mesName}}--<span>{{i.mesTime}}</span></p>
+                </div>
+                <li>{{i.mesText}}</li>
+            </div>
+        </ul>
+    </div>
+    <div class="serverfooter">
+        <input type="text" placeholder="说你想说的吧" [(ngModel)]="text" autofocus/>
+        <button class="in" (click)="pushMes(text)">提交</button>
+    </div>
+</div>

@@ -1,0 +1,134 @@
+
+
+body,html{
+    height:100%;
+}
+.zbj{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+/*---------header开始---------*/
+#b_head{
+    width: 100%;
+    height:1.066667rem;
+    background: #0D0501;
+    display:flex;
+    padding:0 0.32rem 0 0.32rem;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#b_head i{
+    display: block;
+    height:100%;
+    width: 0.8rem;
+    font-size: 0.533333rem;
+    color:#fff;
+    line-height: 1.066667rem;
+}
+
+#b_head h1{
+    font-size: 0.48rem;
+    color:#fff;
+}
+
+/*---------nav开始---------*/
+#b_nav{
+    display:flex;
+    width: 100%;
+    height:2.133333rem;
+    justify-content: center;
+    align-items:center;
+}
+#b_nav span{
+    display: block;
+    width: 3.733333rem;
+    height: 0.853333rem;
+    font-size: 0.373333rem;
+    line-height: 0.853333rem;
+    text-align: center;
+    border: 1px solid #C2C2C6;
+}
+#b_nav span:first-child{
+    border-radius:0.426667rem 0 0 0.426667rem;
+}
+#b_nav span:last-child{
+    border-radius:0 0.426667rem 0.426667rem 0;
+}
+/*---------（nav点击样式）---------*/
+.active{
+    background: #28A4B0;
+    color:#fff;    
+}
+.normal{
+    background: #fff;
+    color:#545455;
+}
+
+
+/*---------main开始---------*/
+
+#b_main{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+    flex:1;
+    padding-top: 0.08rem;
+}
+#b_main ul{
+    padding-left: 0;
+}
+#b_main ul li{
+    margin-bottom: 0.64rem;    
+}
+#b_main .register ul li:first-child,#b_main .register ul li:nth-child(2),#b_main .register ul li:nth-child(3),#b_main .register ul li:nth-child(4),#b_main .register ul li:nth-child(5),#b_main .login ul li:first-child,#b_main .login ul li:nth-child(2){
+    position: relative;
+}
+#b_main .register ul li:nth-child(2) span.code{
+    position: absolute;
+    display: block;
+    width: 2.666667rem; 
+    height:1.12rem;
+    top:0.013333rem;
+    left:6.466667rem;
+    background: #F2F2F4;
+    line-height: 1.12rem;
+    text-align: center; 
+    border-left: 0.013333rem solid #B2B2BA;
+    font-size: 0.666667rem; 
+}
+#b_main .register ul li:first-child span.phoneErr,#b_main .register ul li:nth-child(2) span.vCodeErr,#b_main .register ul li:nth-child(3) span.emailErr,#b_main .register ul li:nth-child(4) span.passwordErr,#b_main .register ul li:nth-child(5) span.vpasswordErr,#b_main .login ul li:first-child span.accountErr,#b_main .login ul li:nth-child(2) span.pwdErr{
+    position: absolute;
+    top:1.2rem;
+    font-size: 0.32rem;
+    color:#FF1744;   
+}
+#b_main .register ul li:nth-child(6){
+    text-align: center;
+    font-size: 0.32rem;
+}
+#b_main .register ul li:nth-child(6) a{
+    color:#28A4B0;
+}
+
+#b_main .register ul li .phone,#b_main .register ul li .vcode,#b_main .register ul li .password,#b_main .register ul li .vpassword,#b_main .register ul li .email,#b_main .login ul li .account,#b_main .login ul li .pwd{
+    width: 9.146667rem;
+    height: 1.173333rem;
+    border: 0.013333rem solid #9D9DA3;
+    font-size: 0.346667rem;
+    padding-left: 0.133333rem;
+}
+#b_main .register ul li:last-child,#b_main .login ul li:last-child{
+    text-align: center;    
+}
+#b_main .register ul li:last-child .btn,#b_main .login ul li:last-child .btn{
+    width: 6.4rem;
+    height:1.333333rem;
+    background: #3A3A48;
+    font-size: 0.426667rem;
+    color:#fff;
+}
+

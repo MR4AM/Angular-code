@@ -1,0 +1,35 @@
+.jasonMask{
+    /*display:none;*/
+    z-index: 1000;
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+.jasonModal{
+    /*display:none;*/
+    z-index: 1001;
+    position: fixed;
+    overflow: auto;
+    top: 5%;
+    right: 5%;
+    width:90%;
+    height: 90%;
+    background-color: #fff;
+}
+.jasonclose{
+    width: 0.993377rem;
+    height: 0.993377rem;
+    text-align: center;
+    font-size: 0.662252rem;
+    line-height:  0.993377rem;
+    border-radius: 50%;
+    border: .06rem solid #ccc;
+    background: #fff;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-left: -.25rem;
+}

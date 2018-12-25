@@ -1,0 +1,60 @@
+<div class="zbj">
+    <!-- <header id="b_head">
+        <i class="iconfont icon-zuojiantou"></i>
+        <h1>注册/登陆</h1>
+        <i class="iconfont icon-weibiaoti12"></i>
+    </header> -->
+    <nav id="b_nav">
+        <span (click)="showReg()" [class.active]="_show==true" [class.normal]="_show==false">用户注册</span>
+        <span (click)="showLog()" [class.active]="show==true" [class.normal]="show==false">用户登录</span>
+    </nav>
+    <main id="b_main">
+        <form class="register" *ngIf="_show">
+            <ul>
+                <li>
+                    <input type="text" class="phone" maxlength="11" placeholder="请输入手机号" (blur)="testRegPN()" />
+                    <span class="phoneErr">{{phoneCont}}</span>     
+                </li>
+                <li>
+                    <input type="text" class="vcode" placeholder="请输入验证码" (blur)="testRegVC()" />
+                    <span class="code" (click)="createCode()">{{res}}</span>
+                    <span class="vCodeErr">{{vcodeCont}}</span>    
+                </li>
+                <li>
+                    <input type="text" class="email" placeholder="请输入邮箱" (blur)="testRegEM()" />
+                    <span class="emailErr">{{emailCont}}</span>   
+                </li>
+                <li>
+                    <input type="password" class="password" placeholder="请设置密码(字母开头,数字字母组成,不少于6位)" (blur)="testRegPD()" />
+                    <span class="passwordErr">{{passwordCont}}</span>   
+                </li>
+                <li>
+                    <input type="password" class="vpassword" placeholder="密码确认" (blur)="testRegVP()" />
+                    <span class="vpasswordErr">{{vpasswordCont}}</span>      
+                </li>
+                <li>
+                    <span>注册即代表我同意</span><a (click)="changeState()">服务条款、取消政策</a>  
+                </li>
+                <li>
+                    <input type="button" class="btn" value="注册" (click)="register()" />   
+                </li>
+            </ul>
+        </form> 
+        <form class="login" *ngIf="show">
+            <ul>
+                <li>
+                    <input type="text" class="account" (blur)="testLogin()" placeholder="请输入手机号/邮箱" />
+                    <span class="accountErr">{{accountCont}}</span>
+                </li>
+                <li>
+                    <input type="password" class="pwd" placeholder="请输入密码" />
+                    <span class="pwdErr">{{pwdCont}}</span>
+                </li>
+                <li>
+                    <input type="button" class="btn" value="登陆" (click)="login()" />
+                </li>
+            </ul>    
+        </form>
+    </main>   
+</div>
+<modal></modal>

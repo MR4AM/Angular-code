@@ -1,0 +1,28 @@
+<div id="order_pay">
+    <div class="main">
+        <div class="main_t">
+            <img src="{{dataset.imgurl}}" alt="" />
+            <div class="info">
+                <p>{{proInfo.proName}}</p>
+                <p>City:{{proInfo.city}}</p>
+                <p>{{proInfo.proSpec}}</p>
+                <p>￥{{dataset.totalprice}}</p>    
+            </div>
+        </div>
+        <div class="zhifubao">
+            <span>支付宝支付（推荐）</span>
+            <i>&gt;</i>
+        </div>
+        <div class="yinlian">
+            <span>银联支付</span>
+            <i>&gt;</i>
+        </div>    
+    </div>
+    
+    <footer>
+        <button (click)="showpopup()">{{btnstr}}</button>
+    </footer>
+    
+    <popup *ngIf="show" (isCancel)="isCancel($event)"></popup>
+
+</div>

@@ -1,0 +1,118 @@
+<div class="detail">
+    <div class="detailcontent">
+        <div class="detailswiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let i of imgArr">
+                       <img src={{i}} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="housePrice"><span>￥{{dataset.proPrice}}</span>起/晚</div>
+        </div>
+        <div class="housename">
+            <h2>{{dataset.proName}}</h2>
+        </div>
+        <div class="housenum">
+            <em>房间编号：{{dataset.proNumber}}</em>
+        </div>
+        <div class="housedes">
+            <ul>
+                <li *ngFor="let i of spanArr"><span>{{i}}</span></li>
+            </ul>
+        </div>
+        <div class="houseintroduce basehousebox">
+           <h3 class="baseh3">房屋介绍</h3>
+           <span class="basespan" (click)="changeState('housedetail')">更多</span>
+        </div>
+        <div class="housedetail">
+           <p class="basep">公寓位于{{dataset.city}}，设计格局为{{dataset.proSpec}}。室内布置现代家居，生活基础设施齐全，采光通风好，提供开放式厨房，地理位置优越，周围的交通设施与生活便利设施均在步行距离之内，相信会给您一次舒适的体验。
+           </p>
+        </div>
+        <div class="houseposition basehousebox">
+            <h3 class="baseh3">地理位置</h3>
+            <baidu-map [options]="opts" class="baidu-map"></baidu-map>
+        </div>
+        <div class="hp">
+            <p class="basep">公寓附近交通便利，步行距离内有联合报公交站、
+        公寓周边娱乐：
+        餐厅，咖啡馆，蛋糕店，购物街，剧院，夜市，公园，艺术馆等众多景点。</p>
+        <span (click)="changeState('houseposition')">阅读更多</span>
+        </div>
+        <div class="housesevice basehousebox">
+           <h3 class="baseh3">房屋设施</h3>
+           <span class="basespan" (click)="changeState('housesevice')">更多</span>
+           <ul>
+               <li><span>空调</span></li>
+               <li><span>暖气</span></li>
+               <li><span>洗衣机</span></li>
+               <li><span>电视机</span></li>
+               <li><span>毛巾</span></li>
+           </ul>
+        </div>
+        <div class="housesdate basehousebox">
+           <h3 class="baseh3">可租日期</h3>
+           <span class="basespan" (click)="changeState()">查看</span>
+        </div>
+        <div class="reservernote basehousebox">
+           <h3 class="baseh3">预定须知</h3>
+        </div>
+        <div class="notedetail">
+           <ul>
+                <li><span>入住时间(当地时间)</span><em>16:00</em></li>
+                <li><span>退房时间(当地时间)</span><em>11:00</em></li>
+                <li><span>最少入住天数</span><em>2天</em></li>
+                <li><span>额外人员费用数</span><em>247/人</em></li>
+                <li><span>押金</span><em>咨询客服</em></li>
+                <li><span>清洁费</span><em>￥403</em></li>
+                <li>
+                    <span>取消政策</span>
+                    <a class="notecheck"  (click)="changeState('cancelpolicy')">查看></a>
+                </li>
+                <li>
+                    <span>房屋守则</span>
+                    <a class="notecheck"  (click)="changeState('houserule')">查看></a>
+                </li>
+                <li>
+                    <span>赔偿与应急政策</span>
+                    <a class="notecheck"  (click)="changeState('emergency')">查看></a>
+                </li>
+           </ul>
+        </div>
+        <div class="freeserve basehousebox">
+           <h3 class="baseh3">免费服务</h3>
+           <ul>
+               <li><span>7*24多语种在线服务</span></li>
+               <li><span>私人定制</span></li>
+           </ul>
+        </div>
+        <div class="payserve basehousebox">
+           <h3 class="baseh3">付费服务</h3>
+           <ul>
+               <li><span>接送机</span></li>
+               <li><span>当地租车</span></li>
+               <li><span>当地向导</span></li>
+               <li><span>预定机票</span></li>
+               <li><span>预定酒店</span></li>
+               <li><span>景点门票</span></li>
+           </ul>
+        </div>
+        <div class="detailpagebottom">
+            <p>———————  精致出行 放心入住  ———————</p>
+        </div>
+    </div>
+    <div class="reservernow">
+        <span class="bookrightnow" (click)="pushorder(dataset.id)">立即预订</span>
+    </div>
+</div>
+<div class="jasoncontent" *ngIf="state">
+    <div class="jasonMask"></div>
+    <div class="jasonModal">
+        <div class="jasondet">
+             <h3 class="jasonh3">{{html.h3}}</h3>
+             <p class="jasonp">{{html.p}}</p>  
+        </div>
+        <button class="jasonclose" (click)="changeState()">&times;</button>
+    </div>
+</div>
+<spinner *ngIf="spinner_show"></spinner>

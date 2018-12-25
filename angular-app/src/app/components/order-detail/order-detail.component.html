@@ -1,0 +1,48 @@
+<div id="order_detail">
+    <div class="main">
+        <img src="{{dataset.imgurl}}" alt="" />
+        <div class="time">
+            <div class="in_time">
+                <span>入住时间</span>
+                <span>{{dataset.starttime}}</span>
+            </div>
+            <div class="out_time">
+                <span>退房时间</span>
+                <span>{{dataset.endtime}}</span>
+            </div>    
+        </div>
+        
+        <ul>
+            <li>
+                <span>订单状态：</span>
+                <span>{{dataset.status|status}}</span>
+            </li>
+            <li>
+                <span>入住天数：</span>
+                <span>{{dataset.days}}</span>
+            </li>
+            <li>
+                <span>入住人数：</span>
+                <span>{{dataset.tenants}}</span>
+            </li>
+            <li>
+                <span>订单总价：</span>
+                <span>{{dataset.totalprice}}</span>
+            </li>
+            <li>
+                <span>订单编号：</span>
+                <span>{{dataset.id}}</span>
+            </li>
+        </ul>
+        <div class="contact_info">
+            <h4>联系人信息：</h4>
+            <p>姓名：<span>{{dataset.username}}</span></p>
+            <p>手机：<span>{{dataset.phone}}</span></p>
+            <p>邮箱：<span>{{dataset.email}}</span></p>
+        </div>    
+    </div>
+    
+    <div class="topay" *ngIf="dataset.status == 0">
+        <button (click)="goToPay(dataset.id)">去支付</button>
+    </div>
+</div>

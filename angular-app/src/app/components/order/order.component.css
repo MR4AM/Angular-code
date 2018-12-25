@@ -1,0 +1,77 @@
+
+#orderList{
+    display:flex;flex-direction: column;
+    background: #f2f2f4;
+}
+#orderList li{
+    margin-top:0.133333rem;
+}
+#orderList .order_t{
+    overflow: hidden;
+    padding:0 0.266667rem;
+    height:0.8rem;
+    line-height: 0.8rem;
+    height:0.8rem;
+    line-height: 0.8rem;
+    background:#fff;
+}
+#orderList .order_t h3{
+    color:#c0c0c8;
+    font-weight: normal;
+    float: left;
+}
+#orderList .order_t span{
+    float: right;
+    color:#28a4b0;
+}
+#orderList .orderInfo{
+    padding:0.32rem 0.426667rem;
+    overflow:hidden;
+}
+#orderList .orderInfo img{
+    width:3.413333rem;
+    height:2.293333rem;
+    float: left;
+}
+#orderList .orderInfo .info{
+    padding-top: 0.133333rem;
+    float: left;
+    margin-left: 0.186667rem;
+    line-height: 0.533333rem;
+}
+#orderList .orderInfo .info p:first-child{
+    color:#313131;
+}
+#orderList .orderInfo .info p{
+    font-size:28px;
+    color:#6b6b76;
+}
+#orderList .order_b{
+    padding:0 0.266667rem;
+    height:1.493333rem;
+    line-height: 1.493333rem;
+    font-size:32px;
+    background:#fff;
+}
+#orderList .order_b  button{
+    float: right;
+    height:0.853333rem;
+    width:2.4rem;
+    background:#3a3a48;
+    line-height: 0.853333rem;
+    color:#fff;
+    font-size:24px;
+    margin-top:0.33333rem;
+    text-align: center;
+    border-radius: 0.066667rem;
+}
+#orderList .tip{
+    font-size:0.426667rem;
+    padding-top:2.0rem;
+    text-align: center;
+}
+@media screen and (min-width:992px){
+    #orderList .order_t,#orderList .order_b  button,#orderList .order_t h3{font-size: 48px;}
+    #orderList .orderInfo .info p{font-size: 56px;}
+    #orderList .order_b{font-size: 60px;}
+}
