@@ -1,14 +1,19 @@
 import { Component, OnInit,DoCheck} from '@angular/core';
 import {HttpclientService} from '../../utils/httpclient.service';
 import {Utils} from '../../utils/dk_utils';
+// 引入websocket模块
+import {$WebSocket} from 'angular2-websocket/angular2-websocket';
+import {Socketio} from 'angular-socket-io';
+// import { Socket } from 'dgram';
 @Component({
   selector: 'hostserver',
   templateUrl: './hostserver.component.html',
-  styleUrls: ['./hostserver.component.css']
+  styleUrls: ['./hostserver.component.scss']
 })
 export class HostserverComponent implements OnInit {
   text:string='';
   mesArr:Array<any>=[];
+  //在构造器中将服务或者模块私有化使用
   constructor(private http:HttpclientService) { }
   getMes(mesName,mesText){
        let mesObj={"mesTime":'',"mesName":'',"mesText":''};
@@ -23,8 +28,18 @@ export class HostserverComponent implements OnInit {
         this.getMes("小家","你好，我是客服小家，请问有什么可以帮助你的？");
       },1000)
   }
+
+  //页面初始化，节点渲染构造
   ngOnInit() {
       this.talkInit();
+  }
+
+  ngDoCheck(){
+    var ws = new $WebSocket('ws://192.168.9.51:8082');
+    ws.onOpen(()=>{
+        console.log('尝试连接服务主机')
+    })
+    // var socket=Socketio.connect('http://localhost:8082');
   }
   pushMes(par){
       let name=window.localStorage.getItem('username');

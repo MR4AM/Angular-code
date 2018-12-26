@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { WeUiModule,LoadmoreModule } from 'ngx-weui';
 import { BaiduMapModule } from 'angular2-baidu-map';
-
+// import {SocketioModule} from 'angular-socket-io';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -57,6 +57,7 @@ import { TestComponent } from './components/test/test.component'
     RootRouter,
     FormsModule,
     HttpModule,
+    // SocketioModule,
     WeUiModule.forRoot(),
     BaiduMapModule.forRoot({ak:'2QUQ7bVf2yDIuFij5LKAfGzfUndbPsFN'}),
   ],

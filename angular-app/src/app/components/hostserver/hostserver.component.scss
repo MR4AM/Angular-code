@@ -1,3 +1,4 @@
+@import '../common/styles/common.scss';
 .hostserver{
     display: flex;
     flex-direction: column;
@@ -51,18 +52,21 @@
     padding:0;
     margin:0;
     width:80%;
-    height: 0.993377rem;
-    line-height: 0.993377rem;
-    font-size: 0.463576rem;    
+    height: Rem(50);
+    line-height: Rem(50);
+    font-size: 0.463576rem;  
+    list-style: none;  
 }
 .serverfooter .in{
     padding:0;
     margin: 0;
     width: 18%;
-    height: 0.993377rem;
-    line-height: 0.993377rem;
+    height: Rem(50);
+    line-height: Rem(50);
     font-size: 0.463576rem;
     background-color: #000;
     color:#fff;
+    list-style: none;
+    border:0;
 }
 

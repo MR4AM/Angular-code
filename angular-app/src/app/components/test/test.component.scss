@@ -1,0 +1,16 @@
+
+@import '../common/styles/common.scss';
+.test{
+    width: 100%;
+    height: Rem(1000);
+    .map{
+        height: Rem(400);
+        .baidu-map{
+            width: 100%;
+            height:Rem(200);
+            overflow: hidden;
+            margin:0.331126rem auto;
+            font-family:"微软雅黑";
+        }
+    }
+}
