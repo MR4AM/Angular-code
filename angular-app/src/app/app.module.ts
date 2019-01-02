@@ -2,11 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import module
+import { ElModule } from 'element-angular';
+import 'element-angular/theme/index.css';
 import { WeUiModule,LoadmoreModule } from 'ngx-weui';
 import { BaiduMapModule } from 'angular2-baidu-map';
 // import {SocketioModule} from 'angular-socket-io';
 
+//旧路由组件注入
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
@@ -28,7 +32,9 @@ import {ModalService} from './service/modal.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HostserverComponent } from './components/hostserver/hostserver.component';
-import { TestComponent } from './components/test/test.component'
+import { TestComponent } from './components/test/test.component';
+import { IndexComponent } from './manger/index/index.component';
+import { MangerloginComponent } from './manger/mangerlogin/mangerlogin.component'
 
 
 //组件及模块注入区域
@@ -50,7 +56,9 @@ import { TestComponent } from './components/test/test.component'
     StatusPipe,
     ModalComponent,
     HostserverComponent,
-    TestComponent 
+    TestComponent,
+    IndexComponent,
+    MangerloginComponent 
   ],
   imports: [
     BrowserModule,
@@ -58,7 +66,9 @@ import { TestComponent } from './components/test/test.component'
     FormsModule,
     HttpModule,
     // SocketioModule,
-    WeUiModule.forRoot(),
+    BrowserAnimationsModule,
+    ElModule.forRoot(),
+    // WeUiModule.forRoot(),
     BaiduMapModule.forRoot({ak:'2QUQ7bVf2yDIuFij5LKAfGzfUndbPsFN'}),
   ],
 
