@@ -9,7 +9,7 @@ import 'element-angular/theme/index.css';
 import { WeUiModule,LoadmoreModule } from 'ngx-weui';
 import { BaiduMapModule } from 'angular2-baidu-map';
 // import {SocketioModule} from 'angular-socket-io';
-
+import { NgxEchartsModule } from 'ngx-echarts';
 //旧路由组件注入
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -34,7 +34,9 @@ import { ModalComponent } from './components/modal/modal.component';
 import { HostserverComponent } from './components/hostserver/hostserver.component';
 import { TestComponent } from './components/test/test.component';
 import { IndexComponent } from './manger/index/index.component';
-import { MangerloginComponent } from './manger/mangerlogin/mangerlogin.component'
+import { MangerloginComponent } from './manger/mangerlogin/mangerlogin.component';
+import { EchartsDirective } from './directive/echarts.directive';
+import { EchartComponent } from './manger/echart/echart.component'
 
 
 //组件及模块注入区域
@@ -58,7 +60,9 @@ import { MangerloginComponent } from './manger/mangerlogin/mangerlogin.component
     HostserverComponent,
     TestComponent,
     IndexComponent,
-    MangerloginComponent 
+    MangerloginComponent,
+    EchartsDirective,
+    EchartComponent 
   ],
   imports: [
     BrowserModule,
@@ -69,6 +73,7 @@ import { MangerloginComponent } from './manger/mangerlogin/mangerlogin.component
     BrowserAnimationsModule,
     ElModule.forRoot(),
     // WeUiModule.forRoot(),
+    NgxEchartsModule,//https://blog.csdn.net/chongchong1325/article/details/76910763 angular2中使用echart
     BaiduMapModule.forRoot({ak:'2QUQ7bVf2yDIuFij5LKAfGzfUndbPsFN'}),
   ],
 

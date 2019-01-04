@@ -9,8 +9,10 @@
 
 ## 自动生成组件，到指定组件目录下下执行以下命令
 - ng generate component component-name
+### 常用命令集合 https://blog.csdn.net/u011127019/article/details/79114886
 
-## Angular 2 指令生命周期钩子的作用及调用顺序 https://www.jianshu.com/p/a2f1d54097f8
+## Angular 2 指令生命周期钩子的作用及调用顺序 
+### https://www.jianshu.com/p/a2f1d54097f8
 ### 基于指令与组件的区别来分类:
 - 1、指令与组件共有的钩子：
 - ngOnChanges

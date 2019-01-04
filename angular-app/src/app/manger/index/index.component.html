@@ -58,5 +58,6 @@
             </ng-template>
           </el-table-column>
         </el-table>
+        <div echarts id="map" [(options)]="option"  class="map" (chartClick)="onChartClick($event)" (chartInit)="onMapInit($event)"></div>
   </div>
 </div>
