@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-var data = [];
-for (var i = 0; i <= 100; i++) {
-    var theta = i / 100 * 360;
-    var r = 5 * (1 + Math.sin(theta / 180 * Math.PI));
-    data.push([r, theta]);
-}
 @Component({
   selector: 'app-echart',
   templateUrl: './echart.component.html',
@@ -17,7 +11,7 @@ export class EchartComponent implements OnInit {
 
   ngOnInit() {
     this.renderChart1();
-    this.renderChart2();
+    this.renderHeart();
   }
   renderChart1(){
     let xAxisData = [];
@@ -64,8 +58,13 @@ export class EchartComponent implements OnInit {
       }
     };
   }
-  //渲染第二个图表
-  renderChart2(){
+  renderHeart(){
+    var data = [];
+    for (var i = 0; i <= 100; i++) {
+        var theta = i / 100 * 360;
+        var r = 5 * (1 + Math.sin(theta / 180 * Math.PI));
+        data.push([r, theta]);
+    }
     this.options2={
         title: {
             text: '画出来最丑的心'
